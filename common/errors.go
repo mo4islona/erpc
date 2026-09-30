@@ -2291,6 +2291,7 @@ type TooLargeComplaint string
 
 const EvmBlockRangeTooLarge TooLargeComplaint = "evm_block_range"
 const EvmAddressesTooLarge TooLargeComplaint = "evm_addresses"
+const ResponseSizeTooLarge TooLargeComplaint = "response_size"
 
 var NewErrEndpointRequestTooLarge = func(cause error, complaint TooLargeComplaint) error {
 	return &ErrEndpointRequestTooLarge{
